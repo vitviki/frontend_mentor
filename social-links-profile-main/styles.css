@@ -80,7 +80,7 @@ button:hover {
     font-weight: 700;
 }
 
-.details_container h5 {
+.details_container h4 {
     color: var(--green);
     font-weight: 600;
 }
@@ -96,7 +96,7 @@ button:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 10px
+    gap: 15px
 }
 
 @media only screen and (max-width: 420px) {
