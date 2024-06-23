@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+:root {
+    /* Primary Colors*/
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    --cyan50: hsla(178, 100%, 50%, 0.4);
+
+    /* Neutral colors */
+    --veryDarkBlueMain: hsl(217, 54%, 11%);
+    --veryDarkBlueCard: hsl(216, 50%, 16%);
+    --veryDarkBlueLine: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: "Outfit", sans-serif;
+    background-color: var(--veryDarkBlueMain);
+    color: var(--white)
+}
+
+img {
+    width: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+p {
+    color:var(--soft-blue);    
+}
+
+.container {
+    width: 320px;
+    margin: 8rem auto;
+    padding: 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: var(--veryDarkBlueCard);
+    border-radius: 20px;
+}
+
+.img_container:hover {
+    position: relative;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.hover_eye {
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+}
+
+.img_container:hover .hover_eye {
+    width: 100%;
+    border-radius: 10px;
+    background-color: var(--cyan50);
+    visibility: visible;
+}
+
+.details_container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border-bottom: 1px solid var(--veryDarkBlueLine);
+}
+
+h3 {
+    font-weight: 600;
+}
+
+.details_container p {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.eth_time_container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.2rem;
+}
+
+.eth,
+.time {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.eth {
+    color: var(--cyan);
+}
+
+.eth img {
+    width: 10px
+}
+
+.eth h4 {
+    font-weight: 600;
+}
+
+.time {
+    justify-content: right;
+    color: var(--soft-blue);
+}
+
+.time img {
+    width: 15px;
+}
+
+.time h4 {
+    font-weight: 400;
+}
+
+.user_container {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    margin-bottom: 1rem;
+}
+
+.user_container img {
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+    border-radius: 50px;
+    border: 1px solid white;
+}
+
+.user_container p {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.user_container span {
+    color: var(--white)
+}
+
+h3:hover,
+.user_container span:hover {
+    color: var(--cyan);
+    cursor: pointer;
+}
