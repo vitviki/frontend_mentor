@@ -45,7 +45,7 @@ const Home = () => {
           />
         </div>
       </div>
-      <div className="w-full flex flex-wrap gap-16 overflow-y-clip">
+      <div className="w-full flex flex-wrap justify-between gap-12 overflow-y-clip">
         {countriesData?.slice(0, 30).map((country) => (
           <Link to={`/${country.name.common}`} title={country.name.common}>
             <CountryCard country={country} key={country.name.common} />

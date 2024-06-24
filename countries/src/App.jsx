@@ -13,7 +13,7 @@ const App = () => {
       }`}
     >
       <Header />
-      <div className="w-full px-10 py-5">
+      <div className="w-full h-full px-16 py-5">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/:country" element={<Country />} />
