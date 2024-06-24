@@ -5,12 +5,14 @@ import Country from "./pages/Country";
 
 const App = () => {
   return (
-    <div>
+    <div className=" bg-veryLightGray">
       <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/:country" element={<Country />} />
-      </Routes>
+      <div className="w-full px-10 py-5">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/:country" element={<Country />} />
+        </Routes>
+      </div>
     </div>
   );
 };
