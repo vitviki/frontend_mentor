@@ -1,6 +1,15 @@
+import { useSelector } from "react-redux";
+
 const CountryCard = ({ country }) => {
+  const { mode } = useSelector((store) => store.mode);
   return (
-    <div className="w-[250px] h-[320px] flex flex-col bg-white shadow-lg">
+    <div
+      className={`w-[250px] h-[320px] flex flex-col ${
+        mode === "light"
+          ? "bg-white text-veryDarkBlueLightMode"
+          : "bg-darkBlue text-white"
+      } shadow-lg rounded-md`}
+    >
       <div className="img_container shadow-md w-full h-[50%]">
         <img
           src={country.flags.png}

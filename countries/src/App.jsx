@@ -1,11 +1,17 @@
 import { Route, Routes } from "react-router-dom";
+import { useSelector } from "react-redux";
 import Header from "./components/Header";
 import Home from "./pages/Home";
 import Country from "./pages/Country";
 
 const App = () => {
+  const { mode } = useSelector((store) => store.mode);
   return (
-    <div className=" bg-veryLightGray">
+    <div
+      className={`${
+        mode === "light" ? "bg-veryLightGray" : " bg-veryDarkBlueDarkMode"
+      }`}
+    >
       <Header />
       <div className="w-full px-10 py-5">
         <Routes>
