@@ -22,15 +22,15 @@ const CountryCard = ({ country }) => {
         <div className="">
           <p className=" text-sm">
             <span className="font-semibold">Population: </span>
-            {country.population}
+            {country.population === undefined ? "" : country.population}
           </p>
           <p className=" text-sm">
             <span className="font-semibold">Region: </span>
-            {country.region}
+            {country.region === undefined ? "" : country.region}
           </p>
           <p className=" text-sm">
-            <span className="font-semibold">Population: </span>
-            {country.capital[0]}
+            <span className="font-semibold">Capital: </span>
+            {country.capital === undefined ? "" : country.capital[0]}
           </p>
         </div>
       </div>
