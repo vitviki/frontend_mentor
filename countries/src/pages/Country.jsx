@@ -22,7 +22,7 @@ const Country = () => {
   }
 
   return (
-    <div className="w-full h-full mt-10 flex flex-col justify-start gap-10">
+    <div className="w-full h-screen mt-10 flex flex-col justify-start gap-10">
       <Helmet>
         <title>{country}</title>
         <link
