@@ -13,7 +13,7 @@ const CountryCard = ({ country }) => {
       <div className="img_container shadow-md w-full h-[50%]">
         <img
           src={country.flags.png}
-          alt={country.flags.alt}
+          alt={country.flags.alt ? country.flags.alt : "flag image"}
           className="w-full h-full rounded-t-md object-fit"
         />
       </div>
