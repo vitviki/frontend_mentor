@@ -10,10 +10,10 @@ const App = () => {
     <div
       className={`${
         mode === "light" ? "bg-veryLightGray" : " bg-veryDarkBlueDarkMode"
-      }`}
+      } w-full h-full`}
     >
       <Header />
-      <div className="w-full h-full px-16 py-5">
+      <div className="px-16 py-5">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/:country" element={<Country />} />
