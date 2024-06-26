@@ -8,7 +8,7 @@ const CountryCard = ({ country }) => {
         mode === "light"
           ? "bg-white text-veryDarkBlueLightMode"
           : "bg-darkBlue text-white"
-      } shadow-lg rounded-md`}
+      } shadow-lg rounded-md sm:m-0 mx-auto`}
     >
       <div className="img_container shadow-md w-full h-[50%]">
         <img

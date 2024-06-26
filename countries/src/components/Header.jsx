@@ -9,7 +9,7 @@ const Header = () => {
 
   return (
     <header
-      className={`w-full h-[70px] px-16 py-5 flex items-center shadow-lg ${
+      className={`w-full h-[70px] md:px-16 px-5 py-5 flex items-center shadow-lg ${
         mode === "light" ? "bg-white" : "bg-darkBlue"
       } sticky top-0 z-50`}
     >
@@ -19,13 +19,15 @@ const Header = () => {
         }`}
       >
         <Link to="/">
-          <h1 className="text-2xl font-bold">Where in the world?</h1>
+          <h1 className="lg:text-2xl sm:text-xl text-md font-bold">
+            Where in the world?
+          </h1>
         </Link>
         <div className="cursor-pointer" onClick={() => dispatch(flipMode())}>
           {mode === "light" ? (
             <div className="flex justify-between items-center gap-2">
               <MdOutlineDarkMode />
-              <h3 className="text-base font-semibold">Dark Mode</h3>
+              <h3 className="md:text-base text-xs font-semibold">Dark Mode</h3>
             </div>
           ) : (
             <div className="flex justify-between items-center gap-2">

@@ -57,7 +57,7 @@ const Home = () => {
         <title>Where in the world?</title>
         <link rel="icon" type="image/svg+xml" href="/globe.svg" />
       </Helmet>
-      <div className="w-full flex justify-between items-center bg-inherit">
+      <div className="w-full flex sm:flex-row flex-col gap-4 md:gap-0 justify-between items-center bg-inherit">
         <div className="relative flex items-center flex-1">
           <MdSearch
             className={`absolute top-1/2 -translate-y-1/2 left-6 cursor-pointer text-2xl ${
@@ -69,7 +69,7 @@ const Home = () => {
             placeholder="Search for a country"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className={`w-[40%] py-3 pl-16 shadow-md focus:border-none focus:outline-none rounded-lg ${
+            className={`lg:w-[582px] md:w-[350px] w-[250px] min-w-[30%] py-3 pl-16 shadow-md focus:border-none focus:outline-none rounded-lg ${
               mode === "light"
                 ? "bg-white placeholder:text-gray-500 text-veryDarkBlueLightMode"
                 : "bg-darkBlue placeholder:text-gray-300 text-white"
@@ -77,7 +77,7 @@ const Home = () => {
           />
         </div>
         <div
-          className={`relative w-[10%] py-3 px-3 ${
+          className={`relative w-[161px] py-3 px-3 ${
             mode === "light"
               ? "text-veryDarkBlueLightMode bg-white"
               : "text-white bg-darkBlue"
@@ -118,7 +118,7 @@ const Home = () => {
         </div>
       </div>
       {searchResult !== undefined && searchTerm.length > 0 ? (
-        <div className="w-full grid grid-cols-6 gap-12">
+        <div className="w-full grid 2xl:grid-cols-6 2xl:gap-12 xl:grid-cols-5 xl:gap-10 lg:grid-cols-4 lg:gap-10 md:grid-cols-3 md:gap-8 sm:grid-cols-2 sm:gap-6 grid-cols-1 gap-5">
           {searchResult?.map((country, idx) => (
             <Link
               to={`/${country.name.official}`}
@@ -130,7 +130,7 @@ const Home = () => {
           ))}
         </div>
       ) : regionResult !== undefined ? (
-        <div className="w-full grid grid-cols-6 gap-12">
+        <div className="w-full grid 2xl:grid-cols-6 2xl:gap-12 xl:grid-cols-5 xl:gap-10 lg:grid-cols-4 lg:gap-10 md:grid-cols-3 md:gap-8 sm:grid-cols-2 sm:gap-6 grid-cols-1 gap-5">
           {regionResult?.map((country, idx) => (
             <Link
               to={`/${country.name.official}`}
@@ -142,7 +142,7 @@ const Home = () => {
           ))}
         </div>
       ) : (
-        <div className="w-full grid grid-cols-6 gap-12">
+        <div className="w-full grid 2xl:grid-cols-6 2xl:gap-12 xl:grid-cols-5 xl:gap-10 lg:grid-cols-4 lg:gap-10 md:grid-cols-3 md:gap-8 sm:grid-cols-2 sm:gap-6 grid-cols-1 gap-5">
           {countriesData?.slice(0, 30).map((country, idx) => (
             <Link
               to={`/${country.name.official}`}

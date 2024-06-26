@@ -32,21 +32,21 @@ const Country = () => {
         />
       </Helmet>
       <Button icon={<MdOutlineKeyboardBackspace />} text={"Back"} to={"/"} />
-      <div className="w-full flex items-center gap-28">
+      <div className="w-full flex lg:flex-row flex-col items-center lg:gap-28 gap-10">
         <div className="">
           <img
             src={countryData[0]?.flags.svg}
             alt={countryData[0]?.flags.alt}
-            className="w-[640px] h-[480px] object-fit"
+            className="sm:w-[640px] sm:h-[480px] w-[426px] h-[240px] object-fit"
           />
         </div>
         <div
-          className={`flex flex-col gap-7 w-[50%] ${
+          className={`flex flex-col gap-7 lg:w-[50%] w-[100%] ${
             mode === "light" ? " text-veryDarkBlueLightMode" : "text-white"
           }`}
         >
           <h1 className="text-2xl font-bold">{countryData[0]?.name.common}</h1>
-          <div className="grid grid-cols-2 gap-y-2 mb-10">
+          <div className="grid md:grid-cols-2 gap-y-2 grid-cols-1 mb-10">
             <p>
               <span className="font-semibold">Native Name: </span>
               {Object.values(countryData[0]?.name.nativeName)[0].common}
@@ -84,10 +84,10 @@ const Country = () => {
               {countryData[0]?.capital[0]}
             </p>
           </div>
-          <div className=" flex items-center gap-3">
+          <div className=" flex flex-wrap items-center gap-3">
             <p className="font-semibold">Border countries:</p>
             {countryData[0].borders && (
-              <div className="flex gap-2">
+              <div className="flex flex-wrap gap-2">
                 {countryData[0].borders.map((country) => (
                   <Button text={countryCodes[country]} to={"/"} key={country} />
                 ))}
