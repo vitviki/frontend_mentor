@@ -67,9 +67,9 @@ header img {
     text-align: center;
 }
 
-@media screen and (min-wdith: 767px) {
-    body {
-        gap: 1.1rem
+@media screen and (min-width: 767px) {
+    .order {
+        gap: 1.5rem
     }
 }
 
